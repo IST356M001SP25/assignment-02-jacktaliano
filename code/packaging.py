@@ -18,7 +18,17 @@ def parse_packaging(packaging_data: str) -> list[dict]:
     input: "20 pieces in 1 pack / 10 packs in 1 carton / 4 cartons in 1 box"
     output: [{ 'pieces' : 20}, {'packs' : 10}, {'carton' : 4}, {'box' : 1}]
     '''
-    pass # TODO: Replace this line and write code
+    result = []
+    layers = packaging_data.split(" in ")
+
+    for layer in layers:
+        words = layer.split() 
+        number = int(words[0]) 
+        name = words[1]
+        result.append({name: number})
+
+    return result
+
 
 
 def calc_total_units(package: list[dict]) -> int:
@@ -33,7 +43,13 @@ def calc_total_units(package: list[dict]) -> int:
     input: [{ 'pieces' : 20}, {'packs' : 10}, {'carton' : 4}, {'box' : 1}]
     output: 800 (e.g. 20*10*4*1)
     '''
-    pass # TODO: Replace this line and write code
+    total = 1 
+
+    for item in package:
+        for key in item: 
+            total *= item[key] 
+
+    return total 
 
 
 def get_unit(package: list[dict]) -> str:
@@ -49,7 +65,12 @@ def get_unit(package: list[dict]) -> str:
     output: pieces
 
     '''
-    pass # TODO: Replace this line and write code
+    if not package:
+        return "" 
+
+    first_item = package[0]
+    return list(first_item.keys())[0] 
+
 
 # This will only run from here, not when imported
 # # Use this for testing / debugging cases with the debugger

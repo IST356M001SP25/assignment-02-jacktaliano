@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Sudent Email:  email
+Student Name:  Jack Taliano
+Sudent Email:  jttalian@syr.edu
 
 ## Instructions
 
@@ -22,4 +22,4 @@ Examples:
 **Best Reflection** "I learned when to use while vs for loops. While loops are for sentiel-controlled values (waiting for a condition to occur), vs for loops are for iterating over collections of fixed values."
 
 `--- Reflection Below This Line ---`
-
+# I had a a decently hard time with this assignment. Most of my struggles came with splitting the text with the in key along with getting it to be in a dictionary within a key. The other two functions were a little easier to deal with. It was just a matter of using for loops to get the output that I wanted. Overall, this was a good assignment that challenegd me in what we've learned in class.
